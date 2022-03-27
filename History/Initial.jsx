@@ -2,9 +2,9 @@ import './Initial.less';
 import React, {Component} from 'react';
 import {ConfigProvider, DotLoading} from "antd-mobile";
 import {Api, History, Parse, LocalStorage, Navigator} from "h-react-antd-mobile";
-import {LoadingOutlined} from "antd-mobile-icons";
 
 import Login from "./Login";
+import Catalog from "./Catalog";
 
 class Initial extends Component {
   constructor(props) {
@@ -124,7 +124,9 @@ class Initial extends Component {
       return (
         <ConfigProvider locale={History.i18nAntd()}>
           <div className="container">
+            <Catalog/>
             <div className="exhibition">
+              {/*<Guidance/>*/}
               <div className="subPages">
                 <div className="subs">
                   {
